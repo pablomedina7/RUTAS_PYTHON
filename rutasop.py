@@ -19,7 +19,7 @@ def A_STARLOG(mapa, inicio, objetivo):
         _, actual = heapq.heappop(frontera)  # Extrae el nodo con menor costo
         abiertos.discard(actual)  # Remueve el nodo de los abiertos
         
-        if actual == objetivo:  # Si alcanzamos el objetivo, terminamos
+        if actual == objetivo:  
             break
         
         # Recorre los vecinos del nodo actual

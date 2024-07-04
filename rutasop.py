@@ -10,7 +10,7 @@ def heuristica(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 # Implementa el algoritmo A* para encontrar la ruta más corta en un mapa con obstáculos
-def A_STARLOG(mapa, inicio, objetivo):
+def a_starlog (mapa, inicio, objetivo):
     filas, columnas = len(mapa), len(mapa[0])  # Obtiene el número de filas y columnas del mapa
     frontera, came_from, costo_hasta_ahora = [(0, inicio)], {inicio: None}, {inicio: 0}  # Inicializa las estructuras de datos
     abiertos = {inicio}  # Conjunto de nodos abiertos (por explorar)
@@ -112,6 +112,6 @@ print("Mapa con obstáculos:")
 imprimir_mapa(mapa_con_obstaculos, [])
 
 # Calcula la ruta óptima y la imprime
-ruta = A_STARLOG(mapa_con_obstaculos, inicio, objetivo)
+ruta = a_starlog (mapa_con_obstaculos, inicio, objetivo)
 print("Mapa con obstáculos y ruta optimizada:")
 imprimir_mapa(mapa_con_obstaculos, ruta)
